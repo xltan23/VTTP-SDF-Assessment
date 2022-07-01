@@ -28,9 +28,9 @@ public class Template {
 
     // Creating template that takes in template parameters to replace __Variables__ in text
     public String process(String text) {   
-        try {
+        //try {
             if (null == text) {
-                return;
+                ;
             }
             if (text.contains("__address__")) {
                 text.replaceAll("__address__", address);
@@ -43,9 +43,17 @@ public class Template {
             } else {
                 ;
             }
-        } catch (NullPointerException ex) {
-            ex.printStackTrace();
-        }
+        //} catch (NullPointerException ex) {
+        //    ex.printStackTrace();
+        //}
+        return text;
+    }
+
+    public String process2(String text) {
+        text.replaceAll("__address__", address);
+        text.replaceAll("__first_name__", firstName);
+        text.replaceAll("__last_name__", lastName);
+        text.replaceAll("__years__", years);
         return text;
     }
 

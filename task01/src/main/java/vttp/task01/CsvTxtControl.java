@@ -25,8 +25,14 @@ public class CsvTxtControl {
         lines[3] = years;
 
         // Input different rows of strings into the template constructor
-        mail = new Template(lines[2], lines[0], lines[3]);
-        mail.process(text);
+        for (int i = 0; i < lines.length; i++) {
+            //System.out.printf("%d\n",i);
+            if (lines[i] != null) {
+                mail = new Template(lines[2], lines[0], lines[3]);
+                mail.process2(text);
+            }
+        }
+        System.out.printf("%s\n",mail);
     }
 
     public void printMail() {

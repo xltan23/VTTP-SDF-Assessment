@@ -35,6 +35,6 @@ public class Main {
                 ctc.read(data, text);
             }
         }
-        ctc.printMail();
+        //ctc.printMail();
     }
 }
