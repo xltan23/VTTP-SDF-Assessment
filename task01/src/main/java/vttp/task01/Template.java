@@ -1,8 +1,5 @@
 package vttp.task01;
 
-import javax.swing.text.Document;
-import javax.xml.parsers.DocumentBuilder;
-
 public class Template {
 
     // Setting up members
@@ -27,29 +24,7 @@ public class Template {
     }
 
     // Creating template that takes in template parameters to replace __Variables__ in text
-    public String process(String text) {   
-        //try {
-            if (null == text) {
-                ;
-            }
-            if (text.contains("__address__")) {
-                text.replaceAll("__address__", address);
-            } else if (text.contains("__first_name__")) {
-                text.replaceAll("__first_name__", firstName);
-            } else if (text.contains("__last_name__")) {
-                text.replaceAll("__last_name__", lastName);
-            } else if (text.contains("__years__")) {
-                text.replaceAll("__years__", years);
-            } else {
-                ;
-            }
-        //} catch (NullPointerException ex) {
-        //    ex.printStackTrace();
-        //}
-        return text;
-    }
-
-    public String process2(String text) {
+    public String process(String text) {
         text.replaceAll("__address__", address);
         text.replaceAll("__first_name__", firstName);
         text.replaceAll("__last_name__", lastName);
